@@ -17,9 +17,12 @@ return [
             'label' => '权限管理',
             'icon'  => 'fa-cog',
             'menu'  => array(
-                array('label' => '角色列表', 'display'=>true, 'alias' => 'manage.role', 'method' => 'get'),
-                array('label' => '角色添加', 'display'=>false, 'alias' => 'manage.role.add',  'method' => 'get|post'),
-                array('label' => '角色修改', 'display'=>false, 'alias' => 'manage.role.modify',  'method' => 'get|post'),
+                array('label' => '角色信息', 'display'=>true, 'alias' => 'manage.role', 'method' => 'get'),
+                array('label' => '角色修改', 'display'=>false, 'alias' => 'manage.role.modify',  'method' => 'post'),
+                array('label' => '角色权限设置', 'display'=>false, 'alias' => 'manage.role.permissions',  'method' => 'get|post'),
+                
+                array('label' => '用户角色', 'display'=>true, 'alias' => 'manage.user.role', 'method' => 'get'),
+                array('label' => '用户角色修改', 'display'=>false, 'alias' => 'manage.user.role.modify',  'method' => 'post'),
             ),
         ),
     ],

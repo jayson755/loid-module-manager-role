@@ -14,12 +14,13 @@ class CreateSystemManagerAccessTable extends Migration
     public function up()
     {
         Schema::create('system_manager_access', function (Blueprint $table) {
-            $table->increments('access_id')->comment('自增列');
-            $table->string('access_gisn', 50)->default('')->comment('权限标识');
-            $table->string('access_description')->default('')->comment('权限描述');
-            $table->string('access_moudle', 50)->default('')->comment('所属模块');
+            $table->string('access_gisn', 50)->default('')->comment('鏉冮檺鍔熻兘');
+            $table->string('access_permission', 50)->default('')->comment('鏉冮檺鏍囪瘑');
+            
+            $table->integer('role_id')->default(0)->comment('瑙掕壊ID');
             $table->softDeletes();
             $table->timestamps();
+            $table->index('role_id');
         });
     }
 

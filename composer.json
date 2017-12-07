@@ -15,7 +15,7 @@
     },
     "autoload":{
         "psr-4": {
-            "Loid\\Frame\\Manager\\Role\\": "src/"
+            "Loid\\Module\\Manager\\Role\\": "src/"
         }
     }
 }

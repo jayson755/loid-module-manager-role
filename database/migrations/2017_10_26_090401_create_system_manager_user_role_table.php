@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSystemManagerRoleAccessTable extends Migration
+class CreateSystemManagerUserRoleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateSystemManagerRoleAccessTable extends Migration
      */
     public function up()
     {
-        Schema::create('system_manager_role_access', function (Blueprint $table) {
+        Schema::create('system_manager_user_role', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('role_id')->default(0)->comment('½ÇÉ«ID');
-            $table->integer('access_id')->default(0)->coment('È¨ÏÞID');
-            $table->index(['role_id', 'access_id']);
+            $table->integer('role_id')->default(0)->comment('è§’è‰²ID');
+            $table->integer('user_id')->default(0)->coment('ç”¨æˆ·ID');
+            $table->index(['role_id', 'user_id']);
             $table->softDeletes();
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ class CreateSystemManagerRoleAccessTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('system_manager_role_access');
+        Schema::dropIfExists('system_manager_user_role');
     }
 }

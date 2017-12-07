@@ -1,6 +1,6 @@
 <?php
 
-namespace Loid\Frame\Manager\Role\Model;
+namespace Loid\Module\Manager\Role\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
