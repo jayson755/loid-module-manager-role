@@ -15,7 +15,7 @@ return [
     'menus' => [
         'role' => array(
             'label' => '权限管理',
-            'icon'  => 'fa-cog',
+            'icon'  => 'fa-cogs',
             'menu'  => array(
                 array('label' => '角色信息', 'display'=>true, 'alias' => 'manage.role', 'method' => 'get'),
                 array('label' => '角色修改', 'display'=>false, 'alias' => 'manage.role.modify',  'method' => 'post'),
